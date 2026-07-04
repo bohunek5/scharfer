@@ -180,9 +180,13 @@ function renderProducts() {
             }
         }
 
+        const powerMatch = p.name.match(/\d+W/);
+        const powerText = powerMatch ? powerMatch[0] : '';
+
         const html = `
             <div class="product-card">
                 <div class="product-badges">
+                    ${powerText ? `<span class="badge" style="background-color: var(--c-primary); color: var(--c-white); border-color: var(--c-primary); font-weight: 700;">${powerText}</span>` : ''}
                     <span class="badge badge-ip67">IP67</span>
                     <span class="badge">Gwarancja 7 Lat</span>
                 </div>
