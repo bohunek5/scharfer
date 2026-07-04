@@ -60,7 +60,13 @@ const translations = {
         privacyPolicy: "Polityka Prywatności",
         cookieText: "Ta strona korzysta z plików cookies (ciasteczek), aby zapewnić Ci najlepsze doświadczenia z przeglądania.",
         cookiePrivacy: "Dowiedz się więcej w Polityce prywatności",
-        cookieAccept: "Akceptuję"
+        cookieAccept: "Akceptuję",
+        footerDesc: "Wyłączny dystrybutor profesjonalnych zasilaczy LED Scharfer. Niezawodność i moc dla wymagających projektów B2B.",
+        footerContact: "Kontakt",
+        footerVisit: "Poznaj PRESCOT LED",
+        footerRights: "Wszelkie prawa zastrzeżone.",
+        footerPrivacy: "Polityka RODO",
+        footerTerms: "Regulamin",
     },
     en: {
         navHome: "Home",
@@ -121,7 +127,13 @@ const translations = {
         privacyPolicy: "Privacy Policy",
         cookieText: "This website uses cookies to ensure you get the best browsing experience.",
         cookiePrivacy: "Learn more in the Privacy Policy",
-        cookieAccept: "I Accept"
+        cookieAccept: "I Accept",
+        footerDesc: "Exclusive distributor of professional Scharfer LED power supplies. Reliability and power for demanding B2B projects.",
+        footerContact: "Contact",
+        footerVisit: "Discover PRESCOT LED",
+        footerRights: "All rights reserved.",
+        footerPrivacy: "GDPR Policy",
+        footerTerms: "Terms of Service",
     },
     de: {
         navHome: "Startseite",
@@ -243,6 +255,12 @@ const translations = {
         privacyPolicy: "Privatumo politika",
         cookieText: "Šioje svetainėje naudojami slapukai, siekiant užtikrinti geriausią patirtį.",
         cookiePrivacy: "Sužinoti daugiau",
-        cookieAccept: "Sutinku"
+        cookieAccept: "Sutinku",
+        footerDesc: "Išskirtinis profesionalių Scharfer LED maitinimo šaltinių platintojas. Patikimumas ir galia reikliems B2B projektams.",
+        footerContact: "Kontaktai",
+        footerVisit: "Atraskite PRESCOT LED",
+        footerRights: "Visos teisės saugomos.",
+        footerPrivacy: "BDAR politika",
+        footerTerms: "Paslaugų teikimo sąlygos",
     }
 };
