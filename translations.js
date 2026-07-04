@@ -194,7 +194,13 @@ const translations = {
         privacyPolicy: "Datenschutzrichtlinie",
         cookieText: "Diese Website verwendet Cookies, um das beste Surferlebnis zu gewährleisten.",
         cookiePrivacy: "Mehr erfahren in der Datenschutzrichtlinie",
-        cookieAccept: "Akzeptieren"
+        cookieAccept: "Akceptieren",
+        footerDesc: "Exklusiver Distributor von professionellen Scharfer LED-Netzteilen. Zuverlässigkeit und Leistung für anspruchsvolle B2B-Projekte.",
+        footerContact: "Kontakt",
+        footerVisit: "Entdecken Sie PRESCOT LED",
+        footerRights: "Alle Rechte vorbehalten.",
+        footerPrivacy: "DSGVO-Richtlinie",
+        footerTerms: "Nutzungsbedingungen",
     },
     lt: {
         navHome: "Pagrindinis",

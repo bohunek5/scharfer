@@ -373,7 +373,7 @@ img {
 /* Hero Section (Intense CRO & AI Gen Bg) */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     overflow: hidden;
