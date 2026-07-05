@@ -709,7 +709,7 @@ img {
 
 .faq-item.active .faq-answer {
     /* Set explicitly via JS to handle dynamic heights smoothly */
-    max-height: 500px; 
+    max-height: 1000px; padding-bottom: 1rem; 
 }
 
 .faq-answer p {

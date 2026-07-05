@@ -28,7 +28,7 @@ const translations = {
         faqTitle: 'FAQ',
         navHome: 'Główna',
         navOferta: 'Zasilacze',
-        navPoznaj: 'Info',
+        navPoznaj: 'Dlaczego?',
         navKontakt: 'Kontakt'
     },
     'en': {
@@ -47,7 +47,7 @@ const translations = {
         faqTitle: 'FAQ',
         navHome: 'Home',
         navOferta: 'Products',
-        navPoznaj: 'Info',
+        navPoznaj: 'Dlaczego?',
         navKontakt: 'Contact'
     },
     'de': {
@@ -66,7 +66,7 @@ const translations = {
         faqTitle: 'FAQ',
         navHome: 'Start',
         navOferta: 'Produkte',
-        navPoznaj: 'Info',
+        navPoznaj: 'Dlaczego?',
         navKontakt: 'Kontakt'
     },
     'lt': {
@@ -85,7 +85,7 @@ const translations = {
         faqTitle: 'DUK',
         navHome: 'Pagrindinis',
         navOferta: 'Produktai',
-        navPoznaj: 'Info',
+        navPoznaj: 'Dlaczego?',
         navKontakt: 'Kontaktai'
     }
 };

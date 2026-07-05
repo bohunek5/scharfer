@@ -11,13 +11,13 @@
 
     <!-- Mobile Header -->
     <header class="app-header">
-        <div class="header-left">
-            <a href="#home" onclick="switchTab('home')"><img src="logo_scharfer.png" alt="Scharfer"></a>
+        <div class="header-left" style="flex: 2;">
+            <a href="#home" onclick="switchTab('home')"><img src="logo_scharfer.png" alt="Scharfer" style="height: 32px;"></a>
         </div>
-        <div class="header-center" style="display:flex; flex-direction:column; align-items:center;">
+        <div class="header-center" style="display:flex; flex-direction:column; align-items:center; flex: 1;">
             <span style="font-size: 8px; font-weight:700; color:#999; letter-spacing:1px; margin-bottom:2px;">DYSTRYBUTOR</span>
             <a href="https://prescot.pl" target="_blank">
-                <img src="PRESCOT_logo.png" alt="PRESCOT" style="height: 12px;">
+                <img src="PRESCOT_logo.png" alt="PRESCOT" style="height: 10px;">
             </a>
         </div>
         <div class="header-right" id="lang-wrapper">
@@ -223,12 +223,12 @@
             <span data-t="navHome">Główna</span>
         </div>
         <div class="nav-item" data-target="oferta">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
             <span data-t="navOferta">Zasilacze</span>
         </div>
         <div class="nav-item" data-target="info">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-            <span data-t="navPoznaj">Info</span>
+            <span data-t="navPoznaj">Dlaczego?</span>
         </div>
         <div class="nav-item" data-target="kontakt">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>

@@ -257,19 +257,16 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
         const faqItem = button.parentElement;
-        const answer = faqItem.querySelector('.faq-answer');
         const isActive = faqItem.classList.contains('active');
         
         // Close all other items
         document.querySelectorAll('.faq-item').forEach(item => {
             item.classList.remove('active');
-            item.querySelector('.faq-answer').style.maxHeight = null;
         });
 
         // Toggle current item
         if (!isActive) {
             faqItem.classList.add('active');
-            answer.style.maxHeight = answer.scrollHeight + "px";
         }
     });
 });
