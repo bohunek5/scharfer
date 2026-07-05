@@ -7,7 +7,7 @@ function switchTab(tabId) {
         section.classList.remove('active');
     });
     // Remove active class from all nav items
-    document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(item => {
+    document.querySelectorAll('.nav-item, .m-nav-item').forEach(item => {
         item.classList.remove('active');
     });
 
@@ -27,7 +27,7 @@ function switchTab(tabId) {
 }
 
 // Setup Nav Listeners
-document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(item => {
+document.querySelectorAll('.nav-item, .m-nav-item').forEach(item => {
     item.addEventListener('click', (e) => {
         e.preventDefault();
         const tabId = item.getAttribute('data-tab');
