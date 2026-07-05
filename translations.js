@@ -52,7 +52,7 @@ const translations = {
         formConsent: "Akceptuję Politykę Prywatności i wyrażam zgodę na przetwarzanie danych osobowych w celu udzielenia odpowiedzi na zapytanie.",
         formSubmit: "Wyślij wiadomość",
         formSuccess: "Twoja wiadomość została wysłana. Skontaktujemy się z Tobą wkrótce!",
-        formError: "Wystąpił błąd serwera. Spróbuj ponownie lub napisz na info@scharfer.com.pl.",
+        formError: "Wystąpił błąd serwera. Spróbuj ponownie lub napisz na komponenty@prescot.pl.",
         
         // Footer & Cookies
         allRightsReserved: "Wszelkie prawa zastrzeżone. Producent zasilaczy LED.",
@@ -119,7 +119,7 @@ const translations = {
         formConsent: "I accept the Privacy Policy and consent to the processing of personal data to answer my inquiry.",
         formSubmit: "Send Message",
         formSuccess: "Your message has been sent. We will contact you shortly!",
-        formError: "A server error occurred. Try again or write to info@scharfer.com.pl.",
+        formError: "A server error occurred. Try again or write to komponenty@prescot.pl.",
         
         // Footer & Cookies
         allRightsReserved: "All rights reserved. LED Power Supply Manufacturer.",
