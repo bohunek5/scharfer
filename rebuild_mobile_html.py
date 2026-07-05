@@ -1,4 +1,39 @@
-<!DOCTYPE html>
+import re
+
+html_path = '/Users/karolbohdanowicz/my-ai-agents/scharfer/index.html'
+with open(html_path, 'r', encoding='utf-8') as f:
+    pc_html = f.read()
+
+# 1. Extract Products
+products_match = re.search(r'<div class="products-grid">(.*?)</div>\s*</section>', pc_html, re.DOTALL)
+if products_match:
+    products_html = products_match.group(1)
+    # Simplify the buttons for mobile or keep them? 
+    # Mobile should just have basic cards. We can clean the product HTML for mobile.
+    products_html = re.sub(r'<div class="product-actions">.*?</div>', '', products_html, flags=re.DOTALL)
+    products_html = re.sub(r'<ul class="product-features">.*?</ul>', '', products_html, flags=re.DOTALL)
+    products_html = re.sub(r'class="btn btn-primary btn-details".*?>', 'class="btn-details">', products_html)
+else:
+    products_html = "<!-- products -->"
+
+# 2. Extract Features (Gdzie uzyc)
+features_match = re.search(r'<div class="features-grid">(.*?)</div>\s*</div>\s*</section>', pc_html, re.DOTALL)
+if features_match:
+    features_html = features_match.group(1)
+else:
+    features_html = "<!-- features -->"
+
+# 3. Extract FAQ
+faq_match = re.search(r'<div class="faq-list">(.*?)</div>\s*</div>\s*</section>', pc_html, re.DOTALL)
+if faq_match:
+    faq_html = faq_match.group(1)
+    # convert class names to match mobile css
+    faq_html = faq_html.replace('faq-question', 'faq-head').replace('faq-answer', 'faq-body')
+else:
+    faq_html = "<!-- faq -->"
+
+# Now construct the mobile.html
+mobile_html = f'''<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -63,57 +98,7 @@
             <div class="section-container">
                 <h2 data-t="offerTitle" class="section-title">Nasze Zasilacze</h2>
                 <div class="products-grid">
-                    
-                    <div class="product-card">
-                        <div class="product-image"><img src="SCH-35-12.jpg" alt="Scharfer 35W" onerror="this.src='logo_scharfer.png'"></div>
-                        <div class="product-info">
-                            <h3>Scharfer 35W</h3>
-                            <p style="color:#666; font-size:12px;">Dostępne napięcia: 12V / 24V</p>
-                            <p style="color:#666; font-size:12px;">Klasa: IP67 (Hermetyczny)</p>
-                            <a class="btn-details" style="display:inline-block; padding:8px 16px; background:var(--c-primary); color:#fff; border-radius:6px; margin-top:10px; text-decoration:none; font-size:13px; font-weight:600;" href="https://www.prescot.com.pl" target="_blank">Zobacz w sklepie B2B</a>
-                        </div>
-                    </div>
-                    
-                    <div class="product-card">
-                        <div class="product-image"><img src="SCH-60-12.jpg" alt="Scharfer 60W" onerror="this.src='logo_scharfer.png'"></div>
-                        <div class="product-info">
-                            <h3>Scharfer 60W</h3>
-                            <p style="color:#666; font-size:12px;">Dostępne napięcia: 12V / 24V</p>
-                            <p style="color:#666; font-size:12px;">Klasa: IP67 (Hermetyczny)</p>
-                            <a class="btn-details" style="display:inline-block; padding:8px 16px; background:var(--c-primary); color:#fff; border-radius:6px; margin-top:10px; text-decoration:none; font-size:13px; font-weight:600;" href="https://www.prescot.com.pl" target="_blank">Zobacz w sklepie B2B</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image"><img src="SCH-100-12.jpg" alt="Scharfer 100W" onerror="this.src='logo_scharfer.png'"></div>
-                        <div class="product-info">
-                            <h3>Scharfer 100W</h3>
-                            <p style="color:#666; font-size:12px;">Dostępne napięcia: 12V / 24V</p>
-                            <p style="color:#666; font-size:12px;">Klasa: IP67 (Hermetyczny)</p>
-                            <a class="btn-details" style="display:inline-block; padding:8px 16px; background:var(--c-primary); color:#fff; border-radius:6px; margin-top:10px; text-decoration:none; font-size:13px; font-weight:600;" href="https://www.prescot.com.pl" target="_blank">Zobacz w sklepie B2B</a>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image"><img src="SCH-150-12.jpg" alt="Scharfer 150W" onerror="this.src='logo_scharfer.png'"></div>
-                        <div class="product-info">
-                            <h3>Scharfer 150W</h3>
-                            <p style="color:#666; font-size:12px;">Dostępne napięcia: 12V / 24V</p>
-                            <p style="color:#666; font-size:12px;">Klasa: IP67 (Hermetyczny)</p>
-                            <a class="btn-details" style="display:inline-block; padding:8px 16px; background:var(--c-primary); color:#fff; border-radius:6px; margin-top:10px; text-decoration:none; font-size:13px; font-weight:600;" href="https://www.prescot.com.pl" target="_blank">Zobacz w sklepie B2B</a>
-                        </div>
-                    </div>
-                    
-                    <div class="product-card">
-                        <div class="product-image"><img src="SCH-200-12.jpg" alt="Scharfer 200W" onerror="this.src='logo_scharfer.png'"></div>
-                        <div class="product-info">
-                            <h3>Scharfer 200W</h3>
-                            <p style="color:#666; font-size:12px;">Dostępne napięcia: 12V / 24V</p>
-                            <p style="color:#666; font-size:12px;">Klasa: IP67 (Hermetyczny)</p>
-                            <a class="btn-details" style="display:inline-block; padding:8px 16px; background:var(--c-primary); color:#fff; border-radius:6px; margin-top:10px; text-decoration:none; font-size:13px; font-weight:600;" href="https://www.prescot.com.pl" target="_blank">Zobacz w sklepie B2B</a>
-                        </div>
-                    </div>
-
+                    {products_html}
                 </div>
                 <a href="#kontakt" class="btn-full" data-t="btnOrderB2B" onclick="switchTab('kontakt')">ZAMÓW B2B</a>
             </div>
@@ -124,12 +109,12 @@
             <div class="section-container">
                 <h2 data-t="whereToUseTitle" class="section-title">Gdzie użyć?</h2>
                 <div class="features-list">
-                    <!-- features -->
+                    {features_html}
                 </div>
 
                 <h2 data-t="faqTitle" class="section-title" style="margin-top: 30px;">FAQ</h2>
                 <div class="faq-list">
-                    <!-- faq -->
+                    {faq_html}
                 </div>
             </div>
         </section>
@@ -174,13 +159,22 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             <span data-t="navKontakt">Kontakt</span>
         </div>
-    
-        <div class="nav-item" onclick="window.open('https://www.prescot.com.pl', '_blank')">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-            <span>Sklep B2C</span>
-        </div>
     </nav>
 
     <script src="mobile.js"></script>
 </body>
-</html>
+</html>'''
+
+with open('/Users/karolbohdanowicz/my-ai-agents/scharfer/mobile.html', 'w', encoding='utf-8') as f:
+    f.write(mobile_html)
+
+# Also update the footer in index.html to 2026 PRESCOT LED
+pc_html = pc_html.replace('2026 Scharfer. Wszelkie prawa', '2026 PRESCOT LED. Wszelkie prawa')
+with open(html_path, 'w', encoding='utf-8') as f:
+    f.write(pc_html)
+
+# Add some CSS for the trust items on mobile
+css_path = '/Users/karolbohdanowicz/my-ai-agents/scharfer/mobile.css'
+with open(css_path, 'a', encoding='utf-8') as f:
+    f.write('\n.trust-item-m { display:flex; align-items:center; justify-content:center; gap:10px; font-weight:600; color:var(--c-primary); font-size:1.1rem; }\n')
+    f.write('\n.feature-content h3 { font-size: 1.1rem; margin-bottom: 5px; color:var(--c-heading); } .feature-content p { font-size: 0.9rem; color:var(--c-text); }\n')
