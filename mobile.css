@@ -271,3 +271,7 @@ a { text-decoration: none; color: inherit; }
 .nav-item.active svg {
     transform: scale(1.1);
 }
+
+.trust-item-m { display:flex; align-items:center; justify-content:center; gap:10px; font-weight:600; color:var(--c-primary); font-size:1.1rem; }
+
+.feature-content h3 { font-size: 1.1rem; margin-bottom: 5px; color:var(--c-heading); } .feature-content p { font-size: 0.9rem; color:var(--c-text); }

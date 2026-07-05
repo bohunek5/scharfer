@@ -12,11 +12,12 @@
     <!-- Mobile Header -->
     <header class="app-header">
         <div class="header-left">
-            <img src="logo_scharfer.png" alt="Scharfer">
+            <a href="#home" onclick="switchTab('home')"><img src="logo_scharfer.png" alt="Scharfer"></a>
         </div>
-        <div class="header-center">
+        <div class="header-center" style="display:flex; flex-direction:column; align-items:center;">
+            <span style="font-size: 8px; font-weight:700; color:#999; letter-spacing:1px; margin-bottom:2px;">DYSTRYBUTOR</span>
             <a href="https://www.prescot.com.pl" target="_blank">
-                <img src="PRESCOT_logo.png" alt="PRESCOT">
+                <img src="PRESCOT_logo.png" alt="PRESCOT" style="height: 12px;">
             </a>
         </div>
         <div class="header-right" id="lang-wrapper">
@@ -36,12 +37,23 @@
         <!-- SECTION: HOME -->
         <section id="home" class="view-section active">
             <div class="hero">
-                <h1 data-t="heroTitle">Zasilacze stworzone dla instalatorów.</h1>
-                <p data-t="heroSubtitle">Moc, która nie zawodzi. Ochrona IP67 i gwarancja niezawodności.</p>
+                <h1 data-t="heroTitle">Pewne 12V i 24V. Zawsze. Bez kompromisów.</h1>
+                <p data-t="heroSubtitle">Profesjonalne zasilacze instalacyjne LED. 100% obciążalności i absolutna niezawodność IP67. Zbudowane dla wymagających projektów, stworzone by trwać.</p>
                 <div class="hero-video">
                     <video autoplay loop muted playsinline>
                         <source src="scharfer_woda_8sek.mp4" type="video/mp4">
                     </video>
+                </div>
+                
+                <div style="margin-top:20px; display:flex; flex-direction:column; gap:10px;">
+                    <div class="trust-item-m">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        <span>7 lat gwarancji</span>
+                    </div>
+                    <div class="trust-item-m">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                        <span>Certyfikaty CE, RoHS</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -50,41 +62,8 @@
         <section id="oferta" class="view-section">
             <div class="section-container">
                 <h2 data-t="offerTitle" class="section-title">Nasze Zasilacze</h2>
-                
                 <div class="products-grid">
-                    <!-- 35W -->
-                    <div class="product-card">
-                        <div class="badge" data-t="badgeCompact">Kompaktowy</div>
-                        <img src="produkty/35w.jpg" alt="35W">
-                        <h3>Scharfer 35W</h3>
-                        <div class="price">49,00 zł</div>
-                    </div>
-                    <!-- 60W -->
-                    <div class="product-card">
-                        <div class="badge" data-t="badgePopular">Popularny</div>
-                        <img src="produkty/60w.jpg" alt="60W">
-                        <h3>Scharfer 60W</h3>
-                        <div class="price">65,00 zł</div>
-                    </div>
-                    <!-- 100W -->
-                    <div class="product-card">
-                        <img src="produkty/100w.jpg" alt="100W">
-                        <h3>Scharfer 100W</h3>
-                        <div class="price">99,00 zł</div>
-                    </div>
-                    <!-- 150W -->
-                    <div class="product-card">
-                        <img src="produkty/150w.jpg" alt="150W">
-                        <h3>Scharfer 150W</h3>
-                        <div class="price">125,00 zł</div>
-                    </div>
-                    <!-- 200W -->
-                    <div class="product-card">
-                        <div class="badge" data-t="badgePro">Pro</div>
-                        <img src="produkty/200w.jpg" alt="200W">
-                        <h3>Scharfer 200W</h3>
-                        <div class="price">159,00 zł</div>
-                    </div>
+                    <!-- products -->
                 </div>
                 <a href="#kontakt" class="btn-full" data-t="btnOrderB2B" onclick="switchTab('kontakt')">ZAMÓW B2B</a>
             </div>
@@ -95,38 +74,12 @@
             <div class="section-container">
                 <h2 data-t="whereToUseTitle" class="section-title">Gdzie użyć?</h2>
                 <div class="features-list">
-                    <div class="feature-item">
-                        <img src="ikony/ogrod.svg" alt="Ogród">
-                        <span data-t="useGarden">Oświetlenie ogrodowe</span>
-                    </div>
-                    <div class="feature-item">
-                        <img src="ikony/lazienka.svg" alt="Łazienka">
-                        <span data-t="useBathroom">Łazienki i wilgotne strefy</span>
-                    </div>
-                    <div class="feature-item">
-                        <img src="ikony/elewacja.svg" alt="Elewacja">
-                        <span data-t="useFacade">Iluminacje elewacji</span>
-                    </div>
-                    <div class="feature-item">
-                        <img src="ikony/basen.svg" alt="Basen">
-                        <span data-t="usePool">Okolice basenów</span>
-                    </div>
+                    <!-- features -->
                 </div>
 
                 <h2 data-t="faqTitle" class="section-title" style="margin-top: 30px;">FAQ</h2>
                 <div class="faq-list">
-                    <div class="faq-item">
-                        <div class="faq-head">Czy zasilacze są wodoodporne? <span>+</span></div>
-                        <div class="faq-body">Tak, posiadają szczelność IP67.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-head">Jaka jest gwarancja? <span>+</span></div>
-                        <div class="faq-body">Oferujemy 7 lat gwarancji.</div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-head">Czy obsługujecie B2B? <span>+</span></div>
-                        <div class="faq-body">Tak, zapraszamy instalatorów do kontaktu.</div>
-                    </div>
+                    <!-- faq -->
                 </div>
             </div>
         </section>
@@ -148,7 +101,7 @@
         <footer class="app-footer">
             <img src="logo_scharfer.png" alt="Scharfer">
             <p>Profesjonalne zasilacze LED</p>
-            <span>&copy; 2026 Scharfer</span>
+            <span>&copy; 2026 PRESCOT LED. Wszelkie prawa zastrzeżone.</span>
         </footer>
 
     </main>
