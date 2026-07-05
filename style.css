@@ -812,22 +812,24 @@ img {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
 }
 
 /* Product Card */
 .product-card {
     background: var(--c-white);
-    border: 1px solid var(--c-border);
+    border: none;
     border-radius: 12px;
-    padding: 2rem 1.5rem 1.5rem;
+    padding: 1.5rem 1rem 1rem;
     display: flex;
     flex-direction: column;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    align-items: center;
     position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    overflow: visible; /* so zoom works outside */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
 }
 
 .product-card::before {
@@ -1654,4 +1656,19 @@ img {
 .scroll-to-top:hover {
     background-color: #c90000;
     transform: translateY(-3px);
+}
+
+.product-card:hover {
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+    transform: translateY(-8px);
+    z-index: 10;
+}
+.product-card:hover .product-image img {
+    transform: scale(1.15);
+}
+.modal-content {
+    background: var(--c-white);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
 }

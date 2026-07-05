@@ -370,31 +370,31 @@ function openProductModal(index) {
                 
                 <div class="product-specs-detailed">
                     <div class="spec-group" style="margin-bottom: 1.5rem;">
-                        <h4 style="font-size: 0.95rem; color: var(--c-heading); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Podstawowe parametry</h4>
+                        <h4 style="font-size: 0.95rem; color: var(--c-heading); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: none; opacity: 0.7; font-weight: 700; padding-bottom: 0.5rem;">Podstawowe parametry</h4>
                         <table class="modal-specs-table" style="width: 100%; border-collapse: collapse; font-size: 0.95rem;">
                             <tbody>
                                 <tr>
-                                    <td style="padding: 0.5rem 0; color: #555; width: 45%; border-bottom: 1px solid #f5f5f5;">${voltageLabel}</td>
-                                    <td style="padding: 0.5rem 0; font-weight: 600; border-bottom: 1px solid #f5f5f5;">${p.specs.voltage} DC</td>
+                                    <td style="padding: 0.5rem 0; color: #555; width: 45%; border-bottom: 1px solid transparent; padding: 0.7rem 0;">${voltageLabel}</td>
+                                    <td style="padding: 0.5rem 0; font-weight: 600; border-bottom: 1px solid transparent; padding: 0.7rem 0;">${p.specs.voltage} DC</td>
                                 </tr>
                                 <tr>
-                                    <td style="padding: 0.5rem 0; color: #555; border-bottom: 1px solid #f5f5f5;">${currentLabel}</td>
-                                    <td style="padding: 0.5rem 0; font-weight: 600; border-bottom: 1px solid #f5f5f5;">${p.specs.current}</td>
+                                    <td style="padding: 0.5rem 0; color: #555; border-bottom: 1px solid transparent; padding: 0.7rem 0;">${currentLabel}</td>
+                                    <td style="padding: 0.5rem 0; font-weight: 600; border-bottom: 1px solid transparent; padding: 0.7rem 0;">${p.specs.current}</td>
                                 </tr>
                                 <tr>
-                                    <td style="padding: 0.5rem 0; color: #555; border-bottom: 1px solid #f5f5f5;">Moc znamionowa</td>
-                                    <td style="padding: 0.5rem 0; font-weight: 600; border-bottom: 1px solid #f5f5f5;">${p.name.split(' ')[1]}</td>
+                                    <td style="padding: 0.5rem 0; color: #555; border-bottom: 1px solid transparent; padding: 0.7rem 0;">Moc znamionowa</td>
+                                    <td style="padding: 0.5rem 0; font-weight: 600; border-bottom: 1px solid transparent; padding: 0.7rem 0;">${p.name.split(' ')[1]}</td>
                                 </tr>
                                 <tr>
-                                    <td style="padding: 0.5rem 0; color: #555; border-bottom: 1px solid #f5f5f5;">${dimLabel}</td>
-                                    <td style="padding: 0.5rem 0; font-weight: 600; border-bottom: 1px solid #f5f5f5;">${p.specs.dim}</td>
+                                    <td style="padding: 0.5rem 0; color: #555; border-bottom: 1px solid transparent; padding: 0.7rem 0;">${dimLabel}</td>
+                                    <td style="padding: 0.5rem 0; font-weight: 600; border-bottom: 1px solid transparent; padding: 0.7rem 0;">${p.specs.dim}</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <div class="spec-group" style="margin-bottom: 1.5rem;">
-                        <h4 style="font-size: 0.95rem; color: var(--c-heading); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Cechy produktu</h4>
+                        <h4 style="font-size: 0.95rem; color: var(--c-heading); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: none; opacity: 0.7; font-weight: 700; padding-bottom: 0.5rem;">Cechy produktu</h4>
                         <ul style="list-style-type: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--c-text); line-height: 1.5;">
                             <li style="margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--c-primary); font-weight: bold;">•</span> Klasa szczelności IP67 (wewnętrzne i zewnętrzne)</li>
                             <li style="margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--c-primary); font-weight: bold;">•</span> 100% pełne obciążenie, 100% test wypalenia (Burn-in)</li>
@@ -404,7 +404,7 @@ function openProductModal(index) {
                     </div>
                     
                     <div class="spec-group" style="margin-bottom: 1.5rem;">
-                        <h4 style="font-size: 0.95rem; color: var(--c-heading); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Zabezpieczenia</h4>
+                        <h4 style="font-size: 0.95rem; color: var(--c-heading); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: none; opacity: 0.7; font-weight: 700; padding-bottom: 0.5rem;">Zabezpieczenia</h4>
                         <ul style="list-style-type: none; padding: 0; margin: 0; font-size: 0.9rem; color: var(--c-text); line-height: 1.5;">
                             <li style="margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--c-primary); font-weight: bold;">•</span> <strong>OVP, SCP, OTP, OLP</strong></li>
                             <li style="margin-bottom: 0.4rem; display: flex; align-items: flex-start; gap: 8px;"><span style="color: var(--c-primary); font-weight: bold;">•</span> Przeciążenie: tryb nadmiernego spadku napięcia, autoodzyskiwanie</li>
@@ -413,7 +413,7 @@ function openProductModal(index) {
                     </div>
                     
                     <div class="spec-group" style="margin-bottom: 1rem;">
-                        <h4 style="font-size: 0.95rem; color: var(--c-heading); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Środowisko i Certyfikaty</h4>
+                        <h4 style="font-size: 0.95rem; color: var(--c-heading); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: none; opacity: 0.7; font-weight: 700; padding-bottom: 0.5rem;">Środowisko i Certyfikaty</h4>
                         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.85rem; margin-bottom: 0.8rem;">
                             <div style="background: #f8f9fa; padding: 0.5rem 0.75rem; border-radius: 6px;"><strong>Temp. pracy:</strong> -30°C ~ +50°C</div>
                             <div style="background: #f8f9fa; padding: 0.5rem 0.75rem; border-radius: 6px;"><strong>Wilgotność:</strong> 20 ~ 95% RH</div>
