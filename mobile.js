@@ -129,7 +129,10 @@ window.switchTab = function(tabId) {
 
 document.querySelectorAll('.nav-item').forEach(item => {
     item.addEventListener('click', () => {
-        switchTab(item.getAttribute('data-target'));
+        const target = item.getAttribute('data-target');
+        if (target) {
+            switchTab(target);
+        }
     });
 });
 
