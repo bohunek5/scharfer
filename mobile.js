@@ -117,7 +117,6 @@ window.switchTab = function(tabId) {
     // show target
     const target = document.getElementById(tabId);
     if(target) target.classList.add('active');
-    
     // update nav icons
     document.querySelectorAll('.nav-item').forEach(item => {
         if(item.getAttribute('data-target') === tabId) {
@@ -126,7 +125,6 @@ window.switchTab = function(tabId) {
             item.classList.remove('active');
         }
     });
-    window.scrollTo(0, 0);
 };
 
 document.querySelectorAll('.nav-item').forEach(item => {
